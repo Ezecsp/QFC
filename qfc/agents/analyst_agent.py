@@ -1,81 +1,66 @@
+# qfc/agents/analyst_agent.py (versión final corregida)
+
 import pandas as pd
-import pandas_ta as ta
+import numpy as np
 from config.logger_config import log
+
+# Se movió la función de cálculo de ATR aquí para que sea autónoma
+def _calculate_atr(data: pd.DataFrame, period: int = 14) -> pd.Series:
+    high_low = data['high'] - data['low']
+    high_close = np.abs(data['high'] - data['close'].shift())
+    low_close = np.abs(data['low'] - data['close'].shift())
+    ranges = pd.concat([high_low, high_close, low_close], axis=1)
+    true_range = np.max(ranges, axis=1)
+    atr = true_range.rolling(window=period).mean()
+    return atr
 
 class AnalystAgent:
     def __init__(self, config: dict):
-        self.strategy_name = config.get("strategy_name", "UnknownStrategy")
-        self.short_window = config.get("sma_short_window", 20)
-        self.long_window = config.get("sma_long_window", 50)
-        # Nombres de columna que usaremos internamente. Ahora tenemos control total.
-        self.short_sma_col = f'sma_{self.short_window}'
-        self.long_sma_col = f'sma_{self.long_window}'
+        """
+        Inicializa el Agente Analista.
+        """
+        self.strategy_name = config.get("strategy_name", "Unnamed Strategy")
+        
+        # --- CORRECCIÓN AQUÍ ---
+        # Nos aseguramos de que los nombres de los atributos sean los que usa el método 'analyze'.
+        self.sma_short_window = config.get("sma_short_window", 50)
+        self.sma_long_window = config.get("sma_long_window", 200)
+        # ---------------------
+        
         log.info(f"Agente Analista inicializado con la estrategia '{self.strategy_name}'.")
 
-    def _calculate_indicators(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Añade los indicadores técnicos necesarios al dataframe."""
-        log.info(f"Calculando {self.short_sma_col} y {self.long_sma_col}...")
-        
-        # --- LA CORRECCIÓN CLAVE ---
-        # Le decimos explícitamente a sma() que use la columna 'close' del dataframe.
-        # Esto asegura que devuelva una única Serie de Pandas, no un DataFrame.
-        sma_short = ta.sma(close=data['close'], length=self.short_window)
-        sma_long = ta.sma(close=data['close'], length=self.long_window)
-        
-        # Ahora que tenemos las Series, las asignamos a nuestras columnas.
-        # Esto también nos da la flexibilidad de nombrar las columnas como queramos.
-        data[self.short_sma_col] = sma_short
-        data[self.long_sma_col] = sma_long
-        # ---------------------------
-        
-        log.info(f"Indicadores calculados y añadidos al DataFrame. Nuevas columnas: {self.short_sma_col}, {self.long_sma_col}")
-        return data
+    def analyze(self, data: pd.DataFrame) -> pd.DataFrame:
+        """
+        Aplica la estrategia de análisis técnico al DataFrame de datos.
+        """
+        if data.empty:
+            return pd.DataFrame()
 
-    def _generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Genera señales de compra/venta basadas en la estrategia."""
+        # 1. Calcular todos los indicadores necesarios
+        data['atr'] = _calculate_atr(data, period=14)
+        
+        short_sma_col = f'sma_{self.sma_short_window}'
+        long_sma_col = f'sma_{self.sma_long_window}'
+        
+        log.info(f"Calculando {short_sma_col} y {long_sma_col}...")
+        data[short_sma_col] = data['close'].rolling(window=self.sma_short_window).mean()
+        data[long_sma_col] = data['close'].rolling(window=self.sma_long_window).mean()
+        
+        # 2. Eliminar filas con NaNs después de calcular TODOS los indicadores
+        data.dropna(inplace=True)
+        if data.empty:
+            log.warning("El DataFrame quedó vacío después de eliminar NaNs. No se puede continuar el análisis.")
+            return pd.DataFrame()
+
+        # 3. Generar las señales de trading
         log.info("Generando señales de trading...")
+        # 'signal' representa la tendencia actual: 1 si la SMA corta está por encima de la larga, -1 si está por debajo.
+        data['signal'] = np.where(data[short_sma_col] > data[long_sma_col], 1, -1)
         
-        # 'position' detecta el cambio de señal (el momento exacto del cruce)
-        # 1 = Entrar en largo, -1 = Entrar en corto
-        # Usamos .shift(1) para comparar la posición actual con la de la vela anterior.
-        buy_condition = (data[self.short_sma_col] > data[self.long_sma_col]) & \
-                        (data[self.short_sma_col].shift(1) <= data[self.long_sma_col].shift(1))
-                        
-        sell_condition = (data[self.short_sma_col] < data[self.long_sma_col]) & \
-                         (data[self.short_sma_col].shift(1) >= data[self.long_sma_col].shift(1))
-
-        data['position'] = 0
-        data.loc[buy_condition, 'position'] = 1
-        data.loc[sell_condition, 'position'] = -1
-
-        # 'signal' indica el estado actual de la tendencia (si la corta está por encima o por debajo)
-        data['signal'] = 0
-        data.loc[data[self.short_sma_col] > data[self.long_sma_col], 'signal'] = 1
-        data.loc[data[self.short_sma_col] < data[self.long_sma_col], 'signal'] = -1
+        # 'position' detecta el evento del cruce. Es 1.0 el día del cruce al alza, -1.0 el día del cruce a la baja.
+        # Se convierte a 2.0 (-2.0) si la señal cambia de -1 a 1 (o viceversa), lo cual es lo que buscamos.
+        # Usamos .diff() para detectar este cambio.
+        data['position'] = data['signal'].diff()
         
         log.info("Señales generadas.")
         return data
-
-    def analyze(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Ejecuta el pipeline completo de análisis para un conjunto de datos."""
-        if data.empty:
-            log.warning("El dataframe de entrada está vacío. No se puede analizar.")
-            return pd.DataFrame()
-        
-        df = data.copy()
-        df_with_indicators = self._calculate_indicators(df)
-        
-        # --- LÍNEAS DE DEPURACIÓN ---
-        log.info("--- DEPURACIÓN: Antes de dropna() ---")
-        log.info(f"Columnas del DataFrame: {df_with_indicators.columns.tolist()}")
-        log.info(f"Recuento de NaNs por columna:\n{df_with_indicators.isna().sum()}")
-        # -----------------------------
-
-        # Las SMAs tendrán valores NaN al principio. Los eliminamos para evitar problemas.
-        df_with_indicators.dropna(inplace=True)
-        
-        log.info(f"--- DEPURACIÓN: Después de dropna(), filas restantes: {len(df_with_indicators)} ---")
-
-        df_with_signals = self._generate_signals(df_with_indicators)
-        
-        return df_with_signals
