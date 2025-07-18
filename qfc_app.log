@@ -1,0 +1,586 @@
+2025-07-17 13:57:12 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 13:57:12 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m...
+2025-07-17 13:57:16 - QFC - WARNING - No se obtuvieron datos para EURUSD=X. El ticker podría ser incorrecto.
+2025-07-17 14:01:00 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:01:00 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 1h...
+2025-07-17 14:01:01 - QFC - ERROR - Error al obtener datos para EURUSD=X: 'tuple' object has no attribute 'lower'
+2025-07-17 14:02:06 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:02:06 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m...
+2025-07-17 14:02:08 - QFC - ERROR - Error al obtener datos para EURUSD=X: 'tuple' object has no attribute 'lower'
+2025-07-17 14:05:53 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:05:53 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:05:53 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:05:56 - QFC - INFO - Datos obtenidos exitosamente. 5662 velas cargadas.
+2025-07-17 14:05:56 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:05:56 - QFC - INFO - Calculando indicadores técnicos (SMA corta y larga)...
+2025-07-17 14:09:26 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:09:26 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:09:26 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:09:30 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:09:30 - QFC - INFO - Datos obtenidos exitosamente. 5665 velas cargadas.
+2025-07-17 14:09:30 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:09:30 - QFC - INFO - Calculando indicadores técnicos (SMA corta y larga)...
+2025-07-17 14:09:30 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:14:07 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:14:07 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:14:07 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:14:10 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:14:10 - QFC - INFO - Datos obtenidos exitosamente. 5662 velas cargadas.
+2025-07-17 14:14:10 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:14:10 - QFC - INFO - Calculando indicadores técnicos (SMA corta y larga)...
+2025-07-17 14:14:10 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:16:33 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:16:33 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:16:33 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:16:36 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:16:36 - QFC - INFO - Datos obtenidos exitosamente. 5663 velas cargadas.
+2025-07-17 14:16:36 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:16:36 - QFC - INFO - Calculando indicadores técnicos (SMA corta y larga)...
+2025-07-17 14:16:36 - QFC - INFO - Nombres de las columnas después de calcular indicadores: ['close', 'close', 'high', 'low', 'open', 'volume']
+2025-07-17 14:16:36 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:18:43 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:18:43 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:18:43 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:18:45 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:18:45 - QFC - INFO - Datos obtenidos exitosamente. 5663 velas cargadas.
+2025-07-17 14:18:45 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:18:45 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:22:36 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:22:36 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:22:36 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:22:37 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:22:37 - QFC - INFO - Datos obtenidos exitosamente. 5663 velas cargadas.
+2025-07-17 14:22:37 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:22:37 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:25:58 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:25:58 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:25:58 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:26:00 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:26:00 - QFC - INFO - Datos obtenidos exitosamente. 5666 velas cargadas.
+2025-07-17 14:26:00 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:26:00 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:29:29 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:29:29 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:29:29 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:29:31 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:29:31 - QFC - INFO - Datos obtenidos exitosamente. 5663 velas cargadas.
+2025-07-17 14:29:31 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:29:31 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:29:31 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:29:31 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:29:31 - QFC - INFO - Señales generadas.
+2025-07-17 14:38:03 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:38:03 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:38:03 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:38:05 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:38:05 - QFC - INFO - Datos obtenidos exitosamente. 5664 velas cargadas.
+2025-07-17 14:38:05 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:38:05 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:38:05 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:38:05 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:38:05 - QFC - INFO - Señales generadas.
+2025-07-17 14:38:05 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:44:00 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:44:00 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:44:00 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:44:02 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:44:02 - QFC - INFO - Datos obtenidos exitosamente. 5667 velas cargadas.
+2025-07-17 14:44:02 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:44:02 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:44:02 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:44:02 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:44:02 - QFC - INFO - Señales generadas.
+2025-07-17 14:44:02 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:46:57 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:46:57 - QFC - INFO - Para el intervalo '15m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:46:57 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 15m y periodo 60d...
+2025-07-17 14:46:59 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:46:59 - QFC - INFO - Datos obtenidos exitosamente. 5665 velas cargadas.
+2025-07-17 14:46:59 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:46:59 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:46:59 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:46:59 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:46:59 - QFC - INFO - Señales generadas.
+2025-07-17 14:46:59 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:47:29 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:47:29 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 14:47:29 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 14:47:32 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:47:32 - QFC - INFO - Datos obtenidos exitosamente. 16970 velas cargadas.
+2025-07-17 14:47:32 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:47:32 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:47:32 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:47:32 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:47:32 - QFC - INFO - Señales generadas.
+2025-07-17 14:47:32 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:49:18 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:49:18 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '30d'.
+2025-07-17 14:49:18 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 30d...
+2025-07-17 14:49:20 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:49:20 - QFC - INFO - Datos obtenidos exitosamente. 8446 velas cargadas.
+2025-07-17 14:49:20 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:49:20 - QFC - INFO - Calculando sma_20 y sma_50...
+2025-07-17 14:49:20 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_20, sma_50
+2025-07-17 14:49:20 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:49:20 - QFC - INFO - Señales generadas.
+2025-07-17 14:49:20 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:51:12 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:51:12 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '30d'.
+2025-07-17 14:51:12 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 30d...
+2025-07-17 14:51:14 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:51:14 - QFC - INFO - Datos obtenidos exitosamente. 8447 velas cargadas.
+2025-07-17 14:51:14 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:51:14 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 14:51:14 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 14:51:14 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:51:14 - QFC - INFO - Señales generadas.
+2025-07-17 14:51:14 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 14:52:05 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 14:52:05 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '20d'.
+2025-07-17 14:52:05 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 20d...
+2025-07-17 14:52:07 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 14:52:07 - QFC - INFO - Datos obtenidos exitosamente. 5624 velas cargadas.
+2025-07-17 14:52:07 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 14:52:07 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 14:52:07 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 14:52:07 - QFC - INFO - Generando señales de trading...
+2025-07-17 14:52:07 - QFC - INFO - Señales generadas.
+2025-07-17 14:52:07 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 15:01:45 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:01:45 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:01:45 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:01:47 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 15:01:47 - QFC - INFO - Datos obtenidos exitosamente. 16973 velas cargadas.
+2025-07-17 15:01:47 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:01:47 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:01:47 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:01:47 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:01:47 - QFC - INFO - Señales generadas.
+2025-07-17 15:01:47 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 15:06:48 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:06:48 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:06:48 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:06:51 - QFC - INFO - Se detectó un MultiIndex en las columnas. Aplanando...
+2025-07-17 15:06:51 - QFC - INFO - Datos obtenidos exitosamente. 16974 velas cargadas.
+2025-07-17 15:06:51 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:06:51 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:06:51 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:06:51 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:06:51 - QFC - INFO - Columnas del DataFrame: ['close', 'close', 'high', 'low', 'open', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:06:51 - QFC - INFO - Recuento de NaNs por columna:
+close         0
+close         0
+high          0
+low           0
+open          0
+volume        0
+sma_5     16974
+sma_15    16974
+dtype: int64
+2025-07-17 15:06:51 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 0 ---
+2025-07-17 15:06:51 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:06:51 - QFC - INFO - Señales generadas.
+2025-07-17 15:06:51 - QFC - WARNING - El análisis no produjo resultados (probablemente por no tener suficientes datos para los indicadores). No se puede mostrar la última señal ni el gráfico.
+2025-07-17 15:10:18 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:10:18 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:10:18 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:10:20 - QFC - INFO - Limpieza de datos completa. Columnas finales: []
+2025-07-17 15:10:20 - QFC - INFO - Datos obtenidos exitosamente. 16978 velas cargadas.
+2025-07-17 15:10:20 - QFC - WARNING - No se pudieron obtener datos históricos, finalizando ejecución.
+2025-07-17 15:13:02 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:13:02 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:13:02 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:13:05 - QFC - INFO - Limpieza de datos completa. Columnas finales: []
+2025-07-17 15:13:05 - QFC - INFO - Datos obtenidos exitosamente. 16975 velas cargadas.
+2025-07-17 15:13:05 - QFC - WARNING - No se pudieron obtener datos históricos, finalizando ejecución.
+2025-07-17 15:15:08 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:15:08 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:15:08 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:15:11 - QFC - ERROR - Faltan columnas esenciales después de la limpieza: ['open', 'high', 'low', 'close', 'volume']. No se puede continuar.
+2025-07-17 15:15:11 - QFC - WARNING - No se pudieron obtener datos históricos, finalizando ejecución.
+2025-07-17 15:17:22 - QFC - INFO - Iniciando Quantum Forex Collective (QFC)...
+2025-07-17 15:17:22 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:17:22 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:17:25 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:17:25 - QFC - INFO - Datos obtenidos exitosamente. 16980 velas cargadas.
+2025-07-17 15:17:25 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:17:25 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:17:25 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:17:25 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:17:25 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:17:25 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:17:25 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16966 ---
+2025-07-17 15:17:25 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:17:25 - QFC - INFO - Señales generadas.
+2025-07-17 15:17:25 - QFC - INFO - --- ANÁLISIS FINALIZADO PARA EURUSD=X ---
+2025-07-17 15:17:25 - QFC - INFO - Última vela cerrada en: 1.15902
+2025-07-17 15:17:25 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): -1
+2025-07-17 15:17:25 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:31:31 - QFC - INFO - --- INICIANDO QUANTUM FOREX COLLECTIVE (QFC) ---
+2025-07-17 15:31:31 - QFC - INFO - >>> Fase de Selección: Activando Agente 2 (Vigilante del Mercado)...
+2025-07-17 15:31:31 - QFC - INFO - Agente Vigilante del Mercado inicializado con ATR(14).
+2025-07-17 15:31:31 - QFC - INFO - Rankeando 3 pares por volatilidad...
+2025-07-17 15:31:31 - QFC - INFO - Analizando volatilidad para EURUSD=X...
+2025-07-17 15:31:31 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:31:31 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:31:33 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:31:33 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:31:33 - QFC - INFO - Volatilidad (ATR) para EURUSD=X: 0.00857
+2025-07-17 15:31:33 - QFC - INFO - Analizando volatilidad para BTCUSD=X...
+2025-07-17 15:31:33 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:31:33 - QFC - INFO - Obteniendo datos para BTCUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:31:38 - QFC - WARNING - No se obtuvieron datos para BTCUSD=X.
+2025-07-17 15:31:38 - QFC - WARNING - No hay suficientes datos para calcular el ATR para BTCUSD=X. Se omitirá.
+2025-07-17 15:31:38 - QFC - INFO - Analizando volatilidad para USDJPY=X...
+2025-07-17 15:31:38 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:31:38 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 1d y periodo 5y...
+2025-07-17 15:31:39 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:31:39 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:31:39 - QFC - INFO - Volatilidad (ATR) para USDJPY=X: 1.53324
+2025-07-17 15:31:39 - QFC - INFO - Ranking de pares por volatilidad completado.
+2025-07-17 15:31:39 - QFC - INFO - Pares del día, rankeados por volatilidad: [{'pair': 'USDJPY=X', 'volatility_atr': 1.5332432134153637}, {'pair': 'EURUSD=X', 'volatility_atr': 0.008568421293251565}]
+2025-07-17 15:31:39 - QFC - INFO - 
+>>> Fase de Análisis: Activando Agente 3 (Analista Técnico) para cada par...
+2025-07-17 15:31:39 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:31:39 - QFC - INFO - --- Analizando USDJPY=X ---
+2025-07-17 15:31:39 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:31:39 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 5m y periodo 60d...
+2025-07-17 15:31:41 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:31:41 - QFC - INFO - Datos obtenidos exitosamente. 16941 velas cargadas.
+2025-07-17 15:31:41 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:31:41 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:31:41 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:31:41 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:31:41 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:31:41 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16927 ---
+2025-07-17 15:31:41 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:31:41 - QFC - INFO - Señales generadas.
+2025-07-17 15:31:41 - QFC - INFO - Última vela cerrada en: 148.74400
+2025-07-17 15:31:41 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): 1
+2025-07-17 15:31:41 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:31:42 - QFC - INFO - --- Analizando EURUSD=X ---
+2025-07-17 15:31:42 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:31:42 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:31:44 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:31:44 - QFC - INFO - Datos obtenidos exitosamente. 16983 velas cargadas.
+2025-07-17 15:31:44 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:31:44 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:31:44 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:31:44 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:31:44 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:31:44 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16969 ---
+2025-07-17 15:31:44 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:31:44 - QFC - INFO - Señales generadas.
+2025-07-17 15:31:44 - QFC - INFO - Última vela cerrada en: 1.15875
+2025-07-17 15:31:44 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): -1
+2025-07-17 15:31:44 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:31:44 - QFC - INFO - 
+--- QFC: ANÁLISIS DIARIO COMPLETADO ---
+2025-07-17 15:32:38 - QFC - INFO - --- INICIANDO QUANTUM FOREX COLLECTIVE (QFC) ---
+2025-07-17 15:32:38 - QFC - INFO - >>> Fase de Selección: Activando Agente 2 (Vigilante del Mercado)...
+2025-07-17 15:32:38 - QFC - INFO - Agente Vigilante del Mercado inicializado con ATR(14).
+2025-07-17 15:32:38 - QFC - INFO - Rankeando 3 pares por volatilidad...
+2025-07-17 15:32:38 - QFC - INFO - Analizando volatilidad para EURUSD=X...
+2025-07-17 15:32:38 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:32:38 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:32:40 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:40 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:32:40 - QFC - INFO - Volatilidad (ATR) para EURUSD=X: 0.00857
+2025-07-17 15:32:40 - QFC - INFO - Analizando volatilidad para GBPUSD=X...
+2025-07-17 15:32:40 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:32:40 - QFC - INFO - Obteniendo datos para GBPUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:32:42 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:42 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:32:42 - QFC - INFO - Volatilidad (ATR) para GBPUSD=X: 0.01024
+2025-07-17 15:32:42 - QFC - INFO - Analizando volatilidad para USDJPY=X...
+2025-07-17 15:32:42 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:32:42 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 1d y periodo 5y...
+2025-07-17 15:32:43 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:43 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:32:43 - QFC - INFO - Volatilidad (ATR) para USDJPY=X: 1.53324
+2025-07-17 15:32:43 - QFC - INFO - Ranking de pares por volatilidad completado.
+2025-07-17 15:32:43 - QFC - INFO - Pares del día, rankeados por volatilidad: [{'pair': 'USDJPY=X', 'volatility_atr': 1.5332432134153637}, {'pair': 'GBPUSD=X', 'volatility_atr': 0.01024078648766073}, {'pair': 'EURUSD=X', 'volatility_atr': 0.008568421293251565}]
+2025-07-17 15:32:43 - QFC - INFO - 
+>>> Fase de Análisis: Activando Agente 3 (Analista Técnico) para cada par...
+2025-07-17 15:32:43 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:32:43 - QFC - INFO - --- Analizando USDJPY=X ---
+2025-07-17 15:32:43 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:32:43 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 5m y periodo 60d...
+2025-07-17 15:32:44 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:44 - QFC - INFO - Datos obtenidos exitosamente. 16941 velas cargadas.
+2025-07-17 15:32:44 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:32:44 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:32:44 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:32:44 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:32:44 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:32:44 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16927 ---
+2025-07-17 15:32:44 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:32:44 - QFC - INFO - Señales generadas.
+2025-07-17 15:32:44 - QFC - INFO - Última vela cerrada en: 148.74600
+2025-07-17 15:32:44 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): 1
+2025-07-17 15:32:44 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:32:45 - QFC - INFO - --- Analizando GBPUSD=X ---
+2025-07-17 15:32:45 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:32:45 - QFC - INFO - Obteniendo datos para GBPUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:32:47 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:47 - QFC - INFO - Datos obtenidos exitosamente. 16985 velas cargadas.
+2025-07-17 15:32:47 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:32:47 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:32:47 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:32:47 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:32:47 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:32:47 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16971 ---
+2025-07-17 15:32:47 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:32:47 - QFC - INFO - Señales generadas.
+2025-07-17 15:32:47 - QFC - INFO - Última vela cerrada en: 1.34099
+2025-07-17 15:32:47 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): 1
+2025-07-17 15:32:47 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:32:48 - QFC - INFO - --- Analizando EURUSD=X ---
+2025-07-17 15:32:48 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:32:48 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:32:49 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:32:49 - QFC - INFO - Datos obtenidos exitosamente. 16983 velas cargadas.
+2025-07-17 15:32:49 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:32:49 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:32:49 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:32:49 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:32:49 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:32:49 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16969 ---
+2025-07-17 15:32:49 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:32:49 - QFC - INFO - Señales generadas.
+2025-07-17 15:32:49 - QFC - INFO - Última vela cerrada en: 1.15875
+2025-07-17 15:32:49 - QFC - INFO - Tendencia actual (1=Alcista, -1=Bajista): -1
+2025-07-17 15:32:49 - QFC - INFO - No hay nuevo cruce en la última vela.
+2025-07-17 15:32:50 - QFC - INFO - 
+--- QFC: ANÁLISIS DIARIO COMPLETADO ---
+2025-07-17 15:59:02 - QFC - INFO - --- INICIANDO QUANTUM FOREX COLLECTIVE (QFC) ---
+2025-07-17 15:59:02 - QFC - INFO - >>> Fase de Selección: Activando Agente 2...
+2025-07-17 15:59:02 - QFC - INFO - Agente Vigilante del Mercado inicializado con ATR(14).
+2025-07-17 15:59:02 - QFC - INFO - Rankeando 3 pares por volatilidad...
+2025-07-17 15:59:02 - QFC - INFO - Analizando volatilidad para EURUSD=X...
+2025-07-17 15:59:02 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:59:02 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:59:04 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:59:04 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:59:04 - QFC - INFO - Volatilidad (ATR) para EURUSD=X: 0.00857
+2025-07-17 15:59:04 - QFC - INFO - Analizando volatilidad para GBPUSD=X...
+2025-07-17 15:59:04 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:59:04 - QFC - INFO - Obteniendo datos para GBPUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 15:59:14 - QFC - WARNING - No se obtuvieron datos para GBPUSD=X.
+2025-07-17 15:59:14 - QFC - WARNING - No hay suficientes datos para calcular el ATR para GBPUSD=X. Se omitirá.
+2025-07-17 15:59:14 - QFC - INFO - Analizando volatilidad para USDJPY=X...
+2025-07-17 15:59:14 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 15:59:14 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 1d y periodo 5y...
+2025-07-17 15:59:15 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:59:15 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 15:59:15 - QFC - INFO - Volatilidad (ATR) para USDJPY=X: 1.53324
+2025-07-17 15:59:15 - QFC - INFO - Ranking de pares por volatilidad completado.
+2025-07-17 15:59:15 - QFC - INFO - Pares del día, rankeados por volatilidad: [{'pair': 'USDJPY=X', 'volatility_atr': 1.5332432134153637}, {'pair': 'EURUSD=X', 'volatility_atr': 0.008568421293251565}]
+2025-07-17 15:59:15 - QFC - INFO - 
+>>> Fase de Análisis y Coordinación...
+2025-07-17 15:59:15 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 15:59:15 - QFC - INFO - Agente Coordinador Táctico inicializado.
+2025-07-17 15:59:15 - QFC - INFO - Notificador de Telegram inicializado correctamente.
+2025-07-17 15:59:15 - QFC - INFO - --- Procesando USDJPY=X ---
+2025-07-17 15:59:15 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:59:15 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 5m y periodo 60d...
+2025-07-17 15:59:16 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:59:16 - QFC - INFO - Datos obtenidos exitosamente. 16946 velas cargadas.
+2025-07-17 15:59:16 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:59:16 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:59:16 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:59:16 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:59:16 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:59:16 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16932 ---
+2025-07-17 15:59:16 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:59:16 - QFC - INFO - Señales generadas.
+2025-07-17 15:59:16 - QFC - INFO - No hay nueva señal de cruce para USDJPY=X. Tendencia actual: 1
+2025-07-17 15:59:18 - QFC - INFO - --- Procesando EURUSD=X ---
+2025-07-17 15:59:18 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 15:59:18 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 15:59:19 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 15:59:19 - QFC - INFO - Datos obtenidos exitosamente. 16988 velas cargadas.
+2025-07-17 15:59:19 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 15:59:19 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 15:59:19 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 15:59:19 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 15:59:19 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 15:59:19 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16974 ---
+2025-07-17 15:59:19 - QFC - INFO - Generando señales de trading...
+2025-07-17 15:59:19 - QFC - INFO - Señales generadas.
+2025-07-17 15:59:19 - QFC - INFO - No hay nueva señal de cruce para EURUSD=X. Tendencia actual: 1
+2025-07-17 15:59:20 - QFC - INFO - 
+--- QFC: ANÁLISIS DIARIO COMPLETADO ---
+2025-07-17 16:01:22 - QFC - INFO - --- INICIANDO QUANTUM FOREX COLLECTIVE (QFC) ---
+2025-07-17 16:01:22 - QFC - INFO - >>> Fase de Selección: Activando Agente 2...
+2025-07-17 16:01:22 - QFC - INFO - Agente Vigilante del Mercado inicializado con ATR(14).
+2025-07-17 16:01:22 - QFC - INFO - Rankeando 3 pares por volatilidad...
+2025-07-17 16:01:22 - QFC - INFO - Analizando volatilidad para EURUSD=X...
+2025-07-17 16:01:22 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 16:01:22 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 16:01:24 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:24 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 16:01:24 - QFC - INFO - Volatilidad (ATR) para EURUSD=X: 0.00857
+2025-07-17 16:01:24 - QFC - INFO - Analizando volatilidad para GBPUSD=X...
+2025-07-17 16:01:24 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 16:01:24 - QFC - INFO - Obteniendo datos para GBPUSD=X con intervalo 1d y periodo 5y...
+2025-07-17 16:01:25 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:25 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 16:01:25 - QFC - INFO - Volatilidad (ATR) para GBPUSD=X: 0.01024
+2025-07-17 16:01:25 - QFC - INFO - Analizando volatilidad para USDJPY=X...
+2025-07-17 16:01:25 - QFC - INFO - Para el intervalo '1d', se ha seleccionado un periodo de '5y'.
+2025-07-17 16:01:25 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 1d y periodo 5y...
+2025-07-17 16:01:26 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:26 - QFC - INFO - Datos obtenidos exitosamente. 1302 velas cargadas.
+2025-07-17 16:01:26 - QFC - INFO - Volatilidad (ATR) para USDJPY=X: 1.53324
+2025-07-17 16:01:26 - QFC - INFO - Ranking de pares por volatilidad completado.
+2025-07-17 16:01:26 - QFC - INFO - Pares del día, rankeados por volatilidad: [{'pair': 'USDJPY=X', 'volatility_atr': 1.5332432134153637}, {'pair': 'GBPUSD=X', 'volatility_atr': 0.01024078648766073}, {'pair': 'EURUSD=X', 'volatility_atr': 0.008568421293251565}]
+2025-07-17 16:01:26 - QFC - INFO - 
+>>> Fase de Análisis y Coordinación...
+2025-07-17 16:01:26 - QFC - INFO - Agente Analista inicializado con la estrategia 'SMACrossover'.
+2025-07-17 16:01:26 - QFC - INFO - Agente Coordinador Táctico inicializado.
+2025-07-17 16:01:26 - QFC - INFO - Notificador de Telegram inicializado correctamente.
+2025-07-17 16:01:26 - QFC - INFO - --- Procesando USDJPY=X ---
+2025-07-17 16:01:26 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 16:01:26 - QFC - INFO - Obteniendo datos para USDJPY=X con intervalo 5m y periodo 60d...
+2025-07-17 16:01:28 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:28 - QFC - INFO - Datos obtenidos exitosamente. 16937 velas cargadas.
+2025-07-17 16:01:28 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 16:01:28 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 16:01:28 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 16:01:28 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 16:01:28 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 16:01:28 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16923 ---
+2025-07-17 16:01:28 - QFC - INFO - Generando señales de trading...
+2025-07-17 16:01:28 - QFC - INFO - Señales generadas.
+2025-07-17 16:01:28 - QFC - INFO - No hay nueva señal de cruce para USDJPY=X. Tendencia actual: 1
+2025-07-17 16:01:29 - QFC - INFO - --- Procesando GBPUSD=X ---
+2025-07-17 16:01:29 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 16:01:29 - QFC - INFO - Obteniendo datos para GBPUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 16:01:30 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:30 - QFC - INFO - Datos obtenidos exitosamente. 16986 velas cargadas.
+2025-07-17 16:01:30 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 16:01:30 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 16:01:30 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 16:01:30 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 16:01:30 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 16:01:30 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16972 ---
+2025-07-17 16:01:30 - QFC - INFO - Generando señales de trading...
+2025-07-17 16:01:30 - QFC - INFO - Señales generadas.
+2025-07-17 16:01:30 - QFC - INFO - No hay nueva señal de cruce para GBPUSD=X. Tendencia actual: 1
+2025-07-17 16:01:31 - QFC - INFO - --- Procesando EURUSD=X ---
+2025-07-17 16:01:31 - QFC - INFO - Para el intervalo '5m', se ha seleccionado un periodo de '60d'.
+2025-07-17 16:01:31 - QFC - INFO - Obteniendo datos para EURUSD=X con intervalo 5m y periodo 60d...
+2025-07-17 16:01:33 - QFC - INFO - Limpieza de datos completa. Columnas finales: ['open', 'high', 'low', 'close', 'volume']
+2025-07-17 16:01:33 - QFC - INFO - Datos obtenidos exitosamente. 16985 velas cargadas.
+2025-07-17 16:01:33 - QFC - INFO - Calculando sma_5 y sma_15...
+2025-07-17 16:01:33 - QFC - INFO - Indicadores calculados y añadidos al DataFrame. Nuevas columnas: sma_5, sma_15
+2025-07-17 16:01:33 - QFC - INFO - --- DEPURACIÓN: Antes de dropna() ---
+2025-07-17 16:01:33 - QFC - INFO - Columnas del DataFrame: ['open', 'high', 'low', 'close', 'volume', 'sma_5', 'sma_15']
+2025-07-17 16:01:33 - QFC - INFO - Recuento de NaNs por columna:
+Price
+open       0
+high       0
+low        0
+close      0
+volume     0
+sma_5      4
+sma_15    14
+dtype: int64
+2025-07-17 16:01:33 - QFC - INFO - --- DEPURACIÓN: Después de dropna(), filas restantes: 16971 ---
+2025-07-17 16:01:33 - QFC - INFO - Generando señales de trading...
+2025-07-17 16:01:33 - QFC - INFO - Señales generadas.
+2025-07-17 16:01:33 - QFC - INFO - ¡NUEVA SEÑAL DETECTADA PARA EURUSD=X!
+2025-07-17 16:01:33 - QFC - INFO - Plan de trading creado para EURUSD=X: SELL
+2025-07-17 16:01:37 - QFC - INFO - 
+--- QFC: ANÁLISIS DIARIO COMPLETADO ---
