@@ -1,66 +1,65 @@
-# qfc/agents/analyst_agent.py (versión final corregida)
-
 import pandas as pd
-import numpy as np
 from config.logger_config import log
+from qfc.strategies.sma_crossover_strategy import SmaCrossoverStrategy
+from qfc.strategies.support_resistance_strategy import SupportResistanceStrategy
+#from qfc.strategies.fibonacci_retracement_strategy import FibonacciRetracementStrategy
+from qfc.strategies.ml_prediction_strategy import MLPredictionStrategy
 
-# Se movió la función de cálculo de ATR aquí para que sea autónoma
-def _calculate_atr(data: pd.DataFrame, period: int = 14) -> pd.Series:
-    high_low = data['high'] - data['low']
-    high_close = np.abs(data['high'] - data['close'].shift())
-    low_close = np.abs(data['low'] - data['close'].shift())
-    ranges = pd.concat([high_low, high_close, low_close], axis=1)
-    true_range = np.max(ranges, axis=1)
-    atr = true_range.rolling(window=period).mean()
-    return atr
 
 class AnalystAgent:
     def __init__(self, config: dict):
         """
         Inicializa el Agente Analista.
+        Ya no contiene lógica de estrategia, sino que carga las estrategias
+        especificadas en la configuración.
         """
-        self.strategy_name = config.get("strategy_name", "Unnamed Strategy")
-        
-        # --- CORRECCIÓN AQUÍ ---
-        # Nos aseguramos de que los nombres de los atributos sean los que usa el método 'analyze'.
-        self.sma_short_window = config.get("sma_short_window", 50)
-        self.sma_long_window = config.get("sma_long_window", 200)
-        # ---------------------
-        
-        log.info(f"Agente Analista inicializado con la estrategia '{self.strategy_name}'.")
+        self.strategies = []
+        strategies_to_run = config.get("strategies_to_run", [])
+        strategy_configs = config.get("strategy_configs", {})
 
-    def analyze(self, data: pd.DataFrame) -> pd.DataFrame:
+        log.info(f"Cargando {len(strategies_to_run)} estrategias...")
+
+        for strategy_name in strategies_to_run:
+            if strategy_name == "sma_crossover":
+                # Pasa solo la configuración específica de esta estrategia
+                conf = strategy_configs.get(strategy_name, {})
+                self.strategies.append(SmaCrossoverStrategy(conf))
+            
+            elif strategy_name == "support_resistance":
+                conf = strategy_configs.get(strategy_name, {})
+                self.strategies.append(SupportResistanceStrategy(conf))
+                
+            elif strategy_name == "ml_prediction":
+                conf = strategy_configs.get(strategy_name, {})
+                self.strategies.append(MLPredictionStrategy(conf))
+                
+            #elif strategy_name == "fibonacci_retracement":
+            #    conf = strategy_configs.get(strategy_name, {})
+            #   self.strategies.append(FibonacciRetracementStrategy(conf))
+                
+            else:
+                log.warning(f"Estrategia '{strategy_name}' no reconocida. Será ignorada.")
+        
+        log.info("Agente Analista y estrategias inicializados.")
+
+
+    def analyze(self, data: pd.DataFrame, pair: str) -> pd.DataFrame:
         """
-        Aplica la estrategia de análisis técnico al DataFrame de datos.
+        Ejecuta el método 'analyze' de cada estrategia cargada,
+        enriqueciendo el DataFrame con los resultados de cada una.
         """
-        if data.empty:
-            return pd.DataFrame()
+        if not self.strategies:
+            log.warning("No hay estrategias cargadas para analizar.")
+            return data
 
-        # 1. Calcular todos los indicadores necesarios
-        data['atr'] = _calculate_atr(data, period=14)
-        
-        short_sma_col = f'sma_{self.sma_short_window}'
-        long_sma_col = f'sma_{self.sma_long_window}'
-        
-        log.info(f"Calculando {short_sma_col} y {long_sma_col}...")
-        data[short_sma_col] = data['close'].rolling(window=self.sma_short_window).mean()
-        data[long_sma_col] = data['close'].rolling(window=self.sma_long_window).mean()
-        
-        # 2. Eliminar filas con NaNs después de calcular TODOS los indicadores
-        data.dropna(inplace=True)
-        if data.empty:
-            log.warning("El DataFrame quedó vacío después de eliminar NaNs. No se puede continuar el análisis.")
-            return pd.DataFrame()
+        analysis_df = data.copy()
 
-        # 3. Generar las señales de trading
-        log.info("Generando señales de trading...")
-        # 'signal' representa la tendencia actual: 1 si la SMA corta está por encima de la larga, -1 si está por debajo.
-        data['signal'] = np.where(data[short_sma_col] > data[long_sma_col], 1, -1)
-        
-        # 'position' detecta el evento del cruce. Es 1.0 el día del cruce al alza, -1.0 el día del cruce a la baja.
-        # Se convierte a 2.0 (-2.0) si la señal cambia de -1 a 1 (o viceversa), lo cual es lo que buscamos.
-        # Usamos .diff() para detectar este cambio.
-        data['position'] = data['signal'].diff()
-        
-        log.info("Señales generadas.")
-        return data
+        log.info(f"Ejecutando {len(self.strategies)} estrategias sobre los datos...")
+        for strategy in self.strategies:
+            try:
+                # Cada estrategia añade sus propias columnas al DataFrame
+                analysis_df = strategy.analyze(analysis_df, pair=pair)
+            except Exception as e:
+                log.error(f"Error al ejecutar la estrategia {strategy.__class__.__name__}: {e}")
+
+        return analysis_df
