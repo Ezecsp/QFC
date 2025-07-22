@@ -8,55 +8,63 @@ load_dotenv()
 ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 
 # --- Parámetros de Trading ---
-# Pares de divisas iniciales a monitorear
-TRADING_PAIRS = ['EURUSD=X', 'BTC-USD', 'AUDUSD=X']
+TRADING_PAIRS = ['EURUSD=X', 'BTC-USD', 'AUDCAD=X']
 
 MARKET_SELECTOR_CONFIG = {
     "volatility_indicator": "atr",
-    "atr_period": 14  # Periodo estándar para el ATR
+    "atr_period": 14
 }
 
 # --- Configuración del Agente Analista ---
-# Parámetros para la estrategia de cruce de medias móviles (ejemplo inicial)
 ANALYST_AGENT_CONFIG = {
-    # Timeframe para la obtención de datos de análisis
-    "timeframe": "1h", 
-    
-    # Lista de las estrategias que queremos ejecutar
+    "timeframe": "15m", 
     "strategies_to_run": [
-        "sma_crossover", 
-        "support_resistance",
-        #"fibonacci_retracement",
+        "support_resistance", 
+        "order_block",
+        "fvg",
         "ml_prediction",
     ],
-    # Diccionario con las configuraciones para cada estrategia
     "strategy_configs": {
-        "sma_crossover": {
-            "sma_short_window": 20,
-            "sma_long_window": 20
-        },
         "support_resistance": {
             "lookback_period": 90, 
             "peak_distance": 5,
             "zone_creation_threshold_pct": 0.002,
         },
-        #"fibonacci_retracement": {
-        #    "lookback_period": 150 # Analizar las últimas 150 velas
-        #},
+        "order_block": {
+            "lookback": 75,
+            "breakout_candles": 3
+        },
+        "fvg": {
+            "min_size_pct": 0.001
+        },
         "ml_prediction": {
-            "model_path": "qfc_ml_model.joblib"
+            "model_path_template": "qfc_model_{pair}.joblib"
         },
     }
 }
 
-# --- Configuración del Agente 4: Coordinador Táctico ---
+# --- Configuración del Coordinador ---
 COORDINATOR_CONFIG = {
-    "risk_reward_ratio": 3,  # Ratio Riesgo:Beneficio (1:3)
-    "stop_loss_atr_multiplier": 1  # El Stop Loss será 1 veces el ATR
+    "risk_reward_ratio": 3,
+    "stop_loss_atr_multiplier": 1.5
 }
 
-# --- Configuración de Telegram ---
-# Carga las credenciales desde el archivo .env
+# --- Configuración de Puntuación de Señales ---
+SCORING_CONFIG = {
+    "signal_threshold": 2.5,
+    "weights": {
+        "support_resistance": 1.0,
+        "order_block": 1.5,
+        "fvg": 1.0,
+        "ml_confirmation_bonus": 2.0,
+        "counter_trend_penalty": 0.3 # Multiplicador para penalizar señales contra-tendencia
+    }
+}
+
+# --- Configuración de Visualización ---
+SHOW_PLOTS = False # Poner en False para desactivar los gráficos
+
+# --- Configuraciones de Notificaciones ---
 TELEGRAM_CONFIG = {
     "token": os.getenv("TELEGRAM_BOT_TOKEN"),
     "chat_id": os.getenv("TELEGRAM_CHAT_ID")

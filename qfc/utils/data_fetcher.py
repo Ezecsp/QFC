@@ -65,7 +65,8 @@ class DataFetcher:
                 tickers=self.pair,
                 period=final_period,
                 interval=final_interval,
-                progress=False
+                progress=False,
+                auto_adjust=True
             )
             
             if data.empty:

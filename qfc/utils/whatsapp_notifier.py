@@ -1,11 +1,11 @@
-import requests
-import json
+import httpx
 import asyncio
 from config.logger_config import log
 
 class WhatsAppNotifier:
     """
-    Clase responsable de enviar mensajes a WhatsApp a través de GREEN-API.
+    Clase responsable de enviar mensajes a WhatsApp a través de GREEN-API
+    utilizando un cliente HTTP asíncrono.
     """
     def __init__(self, config: dict):
         self.id_instance = config.get("id_instance")
@@ -21,18 +21,6 @@ class WhatsAppNotifier:
             self.api_url = f"https://api.green-api.com/waInstance{self.id_instance}/sendMessage/{self.api_token}"
             log.info("Notificador de WhatsApp (GREEN-API) inicializado correctamente.")
             
-    def _send_request(self, payload: dict):
-        """Función síncrona que realiza la petición HTTP."""
-        headers = {'Content-Type': 'application/json'}
-        try:
-            response = requests.post(self.api_url, headers=headers, data=json.dumps(payload), timeout=10)
-            if response.status_code == 200:
-                log.info("Mensaje enviado a WhatsApp exitosamente.")
-            else:
-                log.error(f"Error al enviar a WhatsApp. Status: {response.status_code}, Response: {response.text}")
-        except Exception as e:
-            log.error(f"Excepción al enviar petición a WhatsApp: {e}")
-
     async def send_message(self, message: str):
         """
         Prepara y envía un mensaje a WhatsApp de forma asíncrona.
@@ -41,12 +29,21 @@ class WhatsAppNotifier:
             log.warning("Intento de enviar a WhatsApp, pero el notificador no está configurado.")
             return
 
-        # El formato de chatId para GREEN-API es "numero@c.us"
         chat_id = f"{self.target_number}@c.us"
         payload = {
             "chatId": chat_id,
             "message": message
         }
         
-        # Ejecutamos la función de red síncrona en un hilo separado para no bloquear el bucle de eventos de asyncio
-        await asyncio.to_thread(self._send_request, payload)
+        headers = {'Content-Type': 'application/json'}
+
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.post(self.api_url, headers=headers, json=payload, timeout=10)
+            
+            if response.status_code == 200:
+                log.info("Mensaje enviado a WhatsApp exitosamente.")
+            else:
+                log.error(f"Error al enviar a WhatsApp. Status: {response.status_code}, Response: {response.text}")
+        except httpx.RequestError as e:
+            log.error(f"Excepción al enviar petición a WhatsApp: {e}")

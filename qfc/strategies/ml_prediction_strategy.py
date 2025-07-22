@@ -54,7 +54,7 @@ class MLPredictionStrategy(BaseStrategy):
         df['ml_position'] = prediction_signals
         
         # Rellenamos los NaNs que puedan haber surgido al principio
-        df['ml_position'].fillna(0, inplace=True)
+        df['ml_position'] = df['ml_position'].fillna(0)
         
         log.info(f"Análisis de MLPrediction completado. Última predicción para {pair}: {df['ml_position'].iloc[-1]}")
         

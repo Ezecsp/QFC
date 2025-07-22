@@ -30,7 +30,7 @@ class SmaCrossoverStrategy(BaseStrategy):
 
         # Aseguramos que el ATR esté presente para que el Coordinador lo use
         if 'atr' not in df.columns:
-            df['atr'] = _calculate_atr(df, period=14)
+            df['atr'] = df.ta.atr(length=14) 
 
         # Usamos prefijos en las columnas para evitar conflictos con otras estrategias
         short_sma_col = f'sma_short'

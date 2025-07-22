@@ -4,6 +4,8 @@ from qfc.strategies.sma_crossover_strategy import SmaCrossoverStrategy
 from qfc.strategies.support_resistance_strategy import SupportResistanceStrategy
 #from qfc.strategies.fibonacci_retracement_strategy import FibonacciRetracementStrategy
 from qfc.strategies.ml_prediction_strategy import MLPredictionStrategy
+from qfc.strategies.fvg_strategy import FvgStrategy 
+from qfc.strategies.order_block_strategy import OrderBlockStrategy 
 
 
 class AnalystAgent:
@@ -36,6 +38,14 @@ class AnalystAgent:
             #elif strategy_name == "fibonacci_retracement":
             #    conf = strategy_configs.get(strategy_name, {})
             #   self.strategies.append(FibonacciRetracementStrategy(conf))
+            
+            elif strategy_name == "fvg":
+                conf = strategy_configs.get(strategy_name, {})
+                self.strategies.append(FvgStrategy(conf))
+                
+            elif strategy_name == "order_block":
+                conf = strategy_configs.get(strategy_name, {})
+                self.strategies.append(OrderBlockStrategy(conf))
                 
             else:
                 log.warning(f"Estrategia '{strategy_name}' no reconocida. Será ignorada.")
