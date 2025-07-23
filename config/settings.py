@@ -23,6 +23,7 @@ ANALYST_AGENT_CONFIG = {
         "order_block",
         "fvg",
         "ml_prediction",
+        "market_structure_shift",
     ],
     "strategy_configs": {
         "support_resistance": {
@@ -37,16 +38,23 @@ ANALYST_AGENT_CONFIG = {
         "fvg": {
             "min_size_pct": 0.001
         },
+        "market_structure_shift": { # <-- CONFIG NUEVA ESTRATEGIA
+            "lookback": 20,
+            "mss_lookback": 10
+        },
         "ml_prediction": {
             "model_path_template": "qfc_model_{pair}.joblib"
         },
     }
 }
 
-# --- Configuración del Coordinador ---
+# --- Configuración del Coordinador (con Gestión de Riesgo) ---
 COORDINATOR_CONFIG = {
     "risk_reward_ratio": 3,
-    "stop_loss_atr_multiplier": 1.5
+    "stop_loss_atr_multiplier": 1.5,
+    "account_capital": 10000, # Capital de la cuenta en USD
+    "risk_per_trade_pct": 0.01, # Riesgo del 1% por operación
+    "trailing_stop_pct": 0.025, # Trailing Stop del 2.5%
 }
 
 # --- Configuración de Puntuación de Señales ---
@@ -56,13 +64,14 @@ SCORING_CONFIG = {
         "support_resistance": 1.0,
         "order_block": 1.5,
         "fvg": 1.0,
+        "market_structure_shift": 2.5,
         "ml_confirmation_bonus": 2.0,
         "counter_trend_penalty": 0.3 # Multiplicador para penalizar señales contra-tendencia
     }
 }
 
 # --- Configuración de Visualización ---
-SHOW_PLOTS = False # Poner en False para desactivar los gráficos
+SHOW_PLOTS = True # Poner en False para desactivar los gráficos
 
 # --- Configuraciones de Notificaciones ---
 TELEGRAM_CONFIG = {

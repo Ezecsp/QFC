@@ -9,53 +9,59 @@ class MLPredictionStrategy(BaseStrategy):
         super().__init__(config)
         self.model_path_template = config.get("model_path_template", "qfc_model_{pair}.joblib")
         self.models = {}
-        self.prediction_map = {0: -1, 1: 0, 2: 1}
-        log.info("Estrategia 'MLPrediction' (Multi-Modelo con Memoria) inicializada.")
+        self.prediction_map = {0: -1, 1: 0, 2: 1} # Venta, Neutral, Compra
+        log.info("Estrategia 'MLPrediction' (con Features Evolucionadas) inicializada.")
 
     def _get_model(self, pair: str):
         if pair not in self.models:
             model_filename = self.model_path_template.format(pair=pair)
             try:
-                log.info(f"Cargando modelo especialista desde: {model_filename}")
                 self.models[pair] = joblib.load(model_filename)
+                log.info(f"Modelo especialista cargado desde: {model_filename}")
             except FileNotFoundError:
-                log.error(f"No se encontró el archivo del modelo para {pair}: {model_filename}.")
+                log.error(f"Archivo de modelo no encontrado para {pair}: {model_filename}.")
                 self.models[pair] = None
         return self.models[pair]
         
     def _create_features(self, df):
+        # --- ESTE BLOQUE DEBE SER IDÉNTICO AL DE train_model.py ---
+        log.info("Creando características avanzadas para predicción...")
         df.ta.rsi(length=14, append=True)
         df.ta.macd(fast=12, slow=26, signal=9, append=True)
         df.ta.bbands(length=20, append=True)
         df.ta.atr(length=14, append=True)
-        df.dropna(inplace=True) # Importante dropear NaNs después de crear indicadores
+        
+        df['body_size'] = abs(df['close'] - df['open'])
+        df['upper_wick'] = df['high'] - df[['open', 'close']].max(axis=1)
+        df['lower_wick'] = df[['open', 'close']].min(axis=1) - df['low']
+        df['hour_of_day'] = df.index.hour
+        df['day_of_week'] = df.index.dayofweek
+        
+        df.dropna(inplace=True)
         return df
 
     def analyze(self, data: pd.DataFrame, pair: str) -> pd.DataFrame:
-        log.info(f"Ejecutando análisis de MLPrediction para {pair}...")
-        df = data.copy()
-        
+        log.info(f"Ejecutando análisis de ML para {pair}...")
         model = self._get_model(pair)
         if model is None:
-            return df
-        # 1. Creamos características para TODO el DataFrame
-        df_features = self._create_features(df.copy())
+            data['ml_position'] = 0
+            return data
+            
+        df_features = self._create_features(data.copy())
         
-        # 2. Reordenamos las columnas para que coincidan con el entrenamiento
-        df_features_ordered = df_features[model.feature_names_in_]
+        # Alinear columnas con las usadas en el entrenamiento
+        try:
+            df_features_ordered = df_features[model.feature_names_in_]
+        except (AttributeError, KeyError):
+             log.error("Las características del DataFrame no coinciden con las del modelo. Re-entrena el modelo.")
+             data['ml_position'] = 0
+             return data
         
-        # 3. Hacemos predicciones para TODA la historia, no solo la última vela
         predictions_raw = model.predict(df_features_ordered)
-        
-        # 4. Mapeamos las predicciones a nuestras señales [-1, 0, 1]
         prediction_signals = pd.Series(predictions_raw, index=df_features_ordered.index).map(self.prediction_map)
         
-        # 5. Unimos las predicciones al DataFrame original
-        df['ml_position'] = prediction_signals
+        data['ml_position'] = prediction_signals
+        data['ml_position'] = data['ml_position'].fillna(0)
         
-        # Rellenamos los NaNs que puedan haber surgido al principio
-        df['ml_position'] = df['ml_position'].fillna(0)
-        
-        log.info(f"Análisis de MLPrediction completado. Última predicción para {pair}: {df['ml_position'].iloc[-1]}")
-        
-        return df
+        log.info(f"Análisis de ML completado. Última predicción para {pair}: {data['ml_position'].iloc[-1]}")
+        return data
