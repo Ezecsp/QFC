@@ -59,7 +59,7 @@ COORDINATOR_CONFIG = {
 
 # --- Configuración de Puntuación de Señales ---
 SCORING_CONFIG = {
-    "signal_threshold": 2.5,
+    "signal_threshold": 1.5,
     "weights": {
         "support_resistance": 1.0,
         "order_block": 1.5,
