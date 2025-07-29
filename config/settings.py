@@ -24,6 +24,8 @@ ANALYST_AGENT_CONFIG = {
         "fvg",
         "ml_prediction",
         "market_structure_shift",
+        "combined_fibo",
+        "bos_choch_ob",
     ],
     "strategy_configs": {
         "support_resistance": {
@@ -38,12 +40,42 @@ ANALYST_AGENT_CONFIG = {
         "fvg": {
             "min_size_pct": 0.001
         },
-        "market_structure_shift": { # <-- CONFIG NUEVA ESTRATEGIA
+        "market_structure_shift": { 
             "lookback": 20,
             "mss_lookback": 10
         },
         "ml_prediction": {
             "model_path_template": "qfc_model_{pair}.joblib"
+        },
+        "combined_fibo": { # Configuración ajustada
+            "cambio_estructura_lookback": 50,
+            "cambio_estructura_fibo_threshold_pct": 0.001, # 0.1%
+            "cambio_estructura_momentum_confirmation": True,
+
+            "tendencia_basica_period": 14,
+            "tendencia_basica_fibo_ratio": 0.618,
+            "tendencia_basica_touch_threshold_pct": 0.001, # 0.1%
+            "tendencia_basica_momentum_confirmation": True,
+
+            "paridad_volume_threshold": None, # Se calculará dinámicamente
+            "paridad_volume_percentile": 0.90,
+            "paridad_return_lookback": 15,
+            "paridad_return_threshold_pct": 0.001, # 0.1%
+            "paridad_return_momentum_confirmation": True,
+
+            "require_multiple_confirmations": True, # Requiere al menos 2 señales
+            "min_confirmations_for_signal": 2,
+        },
+        "bos_choch_ob": { # <-- CONFIGURACIÓN PARA LA NUEVA ESTRATEGIA
+            "swing_detection_period": 5,
+            "swing_method": "simple", # Opciones: 'simple'
+            "use_close_only_for_break": True,
+            "level_touch_threshold_pct": 0.001, # 0.1%
+            "ob_definition": "level", # Opciones: 'level'
+            "ob_return_lookback": 20,
+            "ob_return_momentum_confirmation": True,
+            "bos_choch_momentum_confirmation": True,
+            "signal_type": "combined", # Opciones: 'combined', 'ob_return' (por ahora)
         },
     }
 }
@@ -64,9 +96,11 @@ SCORING_CONFIG = {
         "support_resistance": 1.0,
         "order_block": 1.5,
         "fvg": 1.0,
-        "market_structure_shift": 2.5,
-        "ml_confirmation_bonus": 2.0,
-        "counter_trend_penalty": 0.3 # Multiplicador para penalizar señales contra-tendencia
+        "market_structure_shift": 1.5,
+        "ml_confirmation_bonus": 1.0,
+        "counter_trend_penalty": 0.5, # Multiplicador para penalizar señales contra-tendencia
+        "bos_choch_ob": 1.5,
+        "combined_fibo": 1.5
     }
 }
 

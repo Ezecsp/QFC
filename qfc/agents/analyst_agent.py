@@ -1,6 +1,4 @@
-# qfc/agents/analyst_agent.py
 import pandas as pd
-# Importamos pandas_ta aquí para poder usarlo directamente
 import pandas_ta as ta
 from config.logger_config import log
 
@@ -10,6 +8,8 @@ from qfc.strategies.order_block_strategy import OrderBlockStrategy
 from qfc.strategies.fvg_strategy import FvgStrategy
 from qfc.strategies.market_structure_shift_strategy import MarketStructureShiftStrategy
 from qfc.strategies.ml_prediction_strategy import MLPredictionStrategy
+from qfc.strategies.combined_fibo_strategy import CombinedFiboStrategy
+from qfc.strategies.bos_choch_ob_strategy import BosChochObStrategy # <-- AÑADIR IMPORTACIÓN
 
 class AnalystAgent:
     """
@@ -38,6 +38,10 @@ class AnalystAgent:
                 self.strategies.append(FvgStrategy(conf))
             elif strategy_name == "market_structure_shift": # <-- AÑADIR BLOQUE
                 self.strategies.append(MarketStructureShiftStrategy(conf))
+            elif strategy_name == "combined_fibo": # <-- AÑADIR BLOQUE ELIF
+                 self.strategies.append(CombinedFiboStrategy(conf))
+            elif strategy_name == "bos_choch_ob": # <-- AÑADIR BLOQUE ELIF
+                 self.strategies.append(BosChochObStrategy(conf)) 
             elif strategy_name == "ml_prediction":
                 self.strategies.append(MLPredictionStrategy(conf))
             else:
